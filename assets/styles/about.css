@@ -1,0 +1,514 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    max-width: 100%;
+    min-height: 100vh;
+}
+section{
+    max-width: 100%;
+    min-height: 100vh;
+    padding-block: 5px;
+    padding-inline: 40px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    top: 0;
+    max-width: 100%;
+    height: 60px;
+    background-color: rgb(115, 249, 115);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 5px;
+    padding-inline: 40px;
+}
+nav{
+    top: 60px;
+    max-width: 100%;
+    height: 30px;
+    padding-block: 10px;
+    padding-inline: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+}
+
+
+
+nav ul li{
+    font-size: clamp(1rem,1.5vw,2rem);
+}
+
+header,nav{
+    position: sticky;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+/* 🔍 Search Bar Styling */
+.searchbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 5px 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  max-width: 40px; /* collapsed */
+  cursor: pointer;
+}
+
+.searchbar i {
+    width: 20px;
+    aspect-ratio: 1;
+  color: #4caf50; /* lightgreen */
+  font-size:clamp(.5rem,.5vw,1rem);
+}
+
+.searchbar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 6px 10px;
+  font-size: 14px;
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Expanded State */
+.searchbar.active {
+  max-width: 250px;
+  height: 50px;
+}
+
+.searchbar.active input {
+  width: 100%;
+  /* height: 50px; */
+  opacity: 1;
+}
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full height on large screens */
+      overflow: hidden;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: inset(50% 0 50% 0); /* closed cinema */
+      transition: clip-path 1s ease-in-out;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+    }
+
+    .carousel-slide.active img {
+      clip-path: inset(0 0 0 0); /* cinema opens */
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(144, 238, 144, 0.85);
+      color: #004466;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      max-width: 90%; /* keeps it inside */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: 10;
+      pointer-events: none; /* only buttons clickable */
+    }
+
+    .controls button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      transition: 0.3s;
+      pointer-events: auto; /* clickable */
+    }
+
+    .controls button:hover {
+      background: rgba(144,238,144,0.9);
+      color: #004466;
+    }
+
+    #prev { left: 10px; }
+    #next { right: 10px; }
+
+    /* Mobile & tablet responsiveness */
+    @media (max-width: 1024px) {
+      .carousel {
+        height: auto;
+        aspect-ratio: 16/9; /* Keeps proportion */
+      }
+      .carousel-slide img {
+        height: auto;
+      }
+      .caption {
+        font-size: 1rem;
+        padding: 8px 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .caption {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+      }
+      .controls button {
+        padding: 10px 12px;
+        font-size: 16px;
+      }
+    }
+    @media screen and (max-width:831px){
+    .toggleMenu{
+        display: block;
+    }
+    header{
+      position: relative;
+    }
+
+    nav ul{
+        position: absolute;
+        top: 0px;
+        right: 0;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        box-shadow:  0 0 5px gainsboro;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+        z-index: 1000;
+        /* display: none; */
+        transition: all .5s linear;
+    }
+}
+
+.eduTitle{
+    text-align: center;
+    margin-block: 5px;
+}
+
+.educardContainer{
+    gap: 20px;
+    width: 100%;
+    height: 80%;
+    margin-top: clamp(15px,100px,300px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+.edcards{
+    height: 550px;
+    /* background-color: #4caf50; */
+    box-shadow: 0 0 5px gainsboro;
+    border-radius: 1rem;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px gainsboro;
+    transition: all 0.8s ease;
+}
+
+.edcards:hover{
+    transform: translateY(-35px);
+}
+
+.eduImage{
+    width: 100%;
+    height: 50%;
+    border: 1px solid;
+    border-radius: 1rem;
+}
+
+.eduImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eduContent{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(1rem,1.5vw,2rem);
+    line-height: clamp(0.5,1.5,2);
+}
+
+    .admission{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .admission h2 {
+     text-align: center;
+     font-size: clamp(1rem,2vw,2rem);
+    }
+    
+    .slider{
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: scroll;
+        position: relative;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        position: absolute;
+        background-color: lightgreen;
+        border-radius: 1rem;
+        /* margin-inline: 20px; */
+        scroll-snap-align: center;
+        cursor: pointer;
+    }
+
+    .card:nth-child(2){
+        transform: translateX(clamp(500px,1300px,1620px));
+    }
+
+    .card img{
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        padding: 10px;
+        border-radius: 1rem;
+    }
+
+    .card .info{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: clamp(1rem,2.5vw,8rem);
+        line-height: clamp(1,2,4);
+    }
+
+  
+    .sports {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .content {
+      flex: 1;
+      max-width: 40%;
+    }
+
+    .sunflower {
+      flex: 1;
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: auto;
+    }
+
+    .petal {
+      position: absolute;
+      width: 180px;
+      height: 250px;
+      background: lightgreen;
+      clip-path: ellipse(45% 70% at 50% 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.6s ease, background 0.6s ease;
+    }
+
+    .petal-content {
+      opacity: 0;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+
+    .petal.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+      clip-path: none;
+      border-radius: 0;
+      background: lightblue;
+      transform: scale(1) !important;
+    }
+
+    .petal.active .petal-content {
+      opacity: 1;
+      transition: opacity 1s ease-in;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .sports {
+        flex-direction: column;
+        text-align: center;
+      }
+      .content {
+        max-width: 100%;
+      }
+      .sunflower {
+        width: 300px;
+        height: 300px;
+      }
+      .petal {
+        width: 120px;
+        height: 180px;
+      }
+    }
+
+     .panel {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .content h2 {font-size: 2.5rem; margin-bottom:1rem;}
+    .content p {font-size:1.1rem; max-width:400px; line-height:1.6;}
+
+    .sunflower {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 1/1;
+    }
+
+    .petal {
+      position: absolute;
+      width: 150px;
+      height: 80px;
+      clip-path: ellipse(70% 50% at 30% 50%);
+      overflow: hidden;
+      transform-origin: center center;
+      opacity: 0.6;
+      transition: all 0.4s ease;
+    }
+
+    .petal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Position petals in a circle */
+    .petal:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg);}
+    .petal:nth-child(2) { transform: rotate(72deg) translate(150px) rotate(-72deg);}
+    .petal:nth-child(3) { transform: rotate(144deg) translate(150px) rotate(-144deg);}
+    .petal:nth-child(4) { transform: rotate(216deg) translate(150px) rotate(-216deg);}
+    .petal:nth-child(5) { transform: rotate(288deg) translate(150px) rotate(-288deg);}
+
+    .center {
+      width: 100px;
+      height: 100px;
+      background: #6b3e1d;
+      border-radius: 50%;
+      z-index: 5;
+      position: absolute;
+    }
+
+    /* Responsive tweaks */
+    @media(max-width: 768px){
+      .panel{flex-direction: column; text-align:center;}
+      .content {order:2;}
+      .sunflower {order:1; margin-bottom:2rem;}
+      .content h2 {font-size: 2rem;}
+      .content p {font-size:1rem;}
+    }
