@@ -3,10 +3,11 @@
 // const { default: gsap } = require("gsap");
 
 const toggle  = function(){
+  // alert(`runing`)
   document.querySelector("nav").classList.toggle("active")
 }
 
-document.querySelector("i").addEventListener("click",toggle)
+document.querySelector(".toggleMenu").addEventListener("click",()=>toggle())
 
 const testimonials = document.querySelectorAll(".testimonial");
     const dots = document.querySelectorAll(".dot");
@@ -170,22 +171,21 @@ searchInput.addEventListener('keyup', (e) => {
     item.addEventListener("click", () => {
       // Collapse all other items
       document.querySelectorAll(".faq-item").forEach(i => {
-        i.classList.remove("active");
+        i.classList.remove("act");
       });
       // Toggle current item
-      item.classList.toggle("active");
+      item.classList.toggle("act");
     });
 
     container.appendChild(item);
   });
 
-// ✅ Register plugin correctly
-gsap.registerPlugin(ScrollTrigger);
+
 
 // ✅ Animate the h1 on page load
 
    gsap.fromTo("h1", {
-          y: -1300,
+          y: -1110,
           scale:1.5,
       }, {
           y: 0,
@@ -245,19 +245,19 @@ gsap.registerPlugin(ScrollTrigger);
       })
 
       
-    //      gsap.to(".const",{
-    //     clipPath:"circle(100% at 50% 50%)",
-    //     opacity:1,
-    //     markers:true,
-    //     scrollTrigger:{
-    //         trigger:".education",
-    //         start:"top top",
-    //         end:"bottom bottom",
-    //         scrub:2,
-    //         pin:true,
-    //         markers:true
-    //     }
-    //   })
+         gsap.to(".const",{
+        clipPath:"circle(100% at 50% 50%)",
+        opacity:1,
+        markers:true,
+        scrollTrigger:{
+            trigger:".education",
+            start:"top top",
+            end:"bottom bottom",
+            scrub:2,
+            pin:true,
+            markers:true
+        }
+      })
 
     
       const videos = document.querySelectorAll("video")
@@ -335,7 +335,7 @@ gsap.registerPlugin(ScrollTrigger);
      let evt = gsap.timeline({
        scrollTrigger:{
          trigger:".event",
-         start:"top top",
+         start:"top 20%",
          end:"bottom bottom",
          scrub:true
        }

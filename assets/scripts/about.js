@@ -1,3 +1,12 @@
+// const { transform } = require("next/dist/build/swc/generated-native");
+
+const toggle  = function(){
+  // alert(`runing`)
+  document.querySelector("nav").classList.toggle("active")
+}
+
+document.querySelector(".toggleMenu").addEventListener("click",()=>toggle())
+
 const searchbar = document.querySelector('.searchbar');
 const searchInput = document.querySelector('#searchInput');
 
@@ -67,49 +76,7 @@ searchInput.addEventListener('keyup', (e) => {
     }, 5000);
 
 
-    // Array of programs
-const programsData = [
-  {
-    title: "General Education",
-    image: "https://images.unsplash.com/photo-1581091215365-9fa1f1d2fc21?auto=format&fit=crop&w=800&q=80",
-    items: [
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Secondary School: F1 – F5" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Primary School: Nursery – Class 6" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Exams: Common Entrance & FSLC (100% success)" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Languages: French & English" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Arts & Sports: Football, Basketball, Handball, Volleyball" }
-    ]
-  },
-  {
-    title: "Technical Education",
-    image: "https://images.unsplash.com/photo-1581091870626-ff285dd28c2b?auto=format&fit=crop&w=800&q=80",
-    items: [
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Tailoring / Couture" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Mechanics" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Building & Construction" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Electricity & Electronics" },
-      { icon: "https://img.icons8.com/color/24/000000/checkmark.png", text: "Laboratory & Computer Skills" }
-    ]
-  }
-];
-
-const container = document.getElementById("programsContainer");
-
-// Create cards dynamically
-programsData.forEach(program => {
-  const card = document.createElement("div");
-  card.classList.add("program-card");
-
-  card.innerHTML = `
-    <img class="program-image" src="${program.image}" alt="${program.title}">
-    <h3>${program.title}</h3>
-    <ul class="program-list">
-      ${program.items.map(item => `<li><img src="${item.icon}" alt="check"><span>${item.text}</span></li>`).join('')}
-    </ul>
-  `;
-
-  container.appendChild(card);
-});
+   
 
 document.querySelectorAll(".panel").forEach((panel, i) => {
   const petals = panel.querySelectorAll(".petal");
@@ -130,3 +97,25 @@ document.querySelectorAll(".panel").forEach((panel, i) => {
     );
   });
 });
+
+let pt = gsap.timeline({
+  scrollTrigger:{
+    trigger:".panel",
+    start:"top center",
+    end:"bottom bottom",
+    duration:1,
+    scrub:true
+  }
+})
+
+pt.to(".sportContainer",{
+   opacity:1,
+  clipPath:"circle(100% at 50% 50%)"
+})
+
+// pt.to(".o:nth-child(1)",{
+//   y:0
+// })
+
+
+
