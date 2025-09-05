@@ -66,13 +66,14 @@ const testimonials = document.querySelectorAll(".testimonial");
 
     // Gallery data
     const galleryData = [
-      { category: "sport", src: "https://picsum.photos/id/1011/600/400", caption: "Sport 1" },
-      { category: "sport", src: "https://picsum.photos/id/1025/600/400", caption: "Sport 2" },
+      { category: "sport", src: "assets/images/charlice images/IMG-20250830-WA0033.jpg", caption: "Club Majorete" },
+      {category:"sport",src:"assets/images/charlice images/IMG-20250830-WA0103.jpg",caption:"sport time for the small"},
+      { category: "sport", src: "assets/images/charlice images/IMG-20250830-WA0036.jpg", caption: "Club scout" },
+      {category:"teachers",src:"assets/images/chalice images/IMG-20250830-WA0095.jpg",caption:"teachers"},
+      {category:"sport",src:"assets/images/chalice images/IMG-20250830-WA0058.jpg",caption:"Sport club"},
+      {category:"teachers",src:"./assets/images/chalice images/IMG-20250830-WA0096.jpg",caption:"chalice teachers playing football"},
       { category: "education", src: "https://picsum.photos/id/1005/600/400", caption: "Education 1" },
       { category: "education", src: "https://picsum.photos/id/1015/600/400", caption: "Education 2" },
-      { category: "machine", src: "https://picsum.photos/id/1019/600/400", caption: "Machine 1" },
-      { category: "machine", src: "https://picsum.photos/id/1024/600/400", caption: "Machine 2" },
-      { category: "machine", src: "https://picsum.photos/id/1037/600/400", caption: "Machine 3" }
     ];
 
     const gallery = document.getElementById("gallery");
@@ -366,7 +367,23 @@ searchInput.addEventListener('keyup', (e) => {
       start: "top 80%"
     }
   });
-    
+  
+  let promo =[
+  "Chalice the best choice for the primary and secondary education of your child",
+  "Attendance-work-success",
+  "Cours Facutatifs au prix de 50000fcfa, l'annee scolaire. payable en 2 tranches. Natation et tennes au prix de 75000fcfa"
+]
+let indx = 0
+const publish = function(){
+
+  document.querySelector(".promo").textContent = promo[indx]
+  setTimeout(()=>{
+    if(indx > 2){ indx = 0}
+    publish()
+    indx+=1
+  },10500)
+}
+publish()
 
       
       
