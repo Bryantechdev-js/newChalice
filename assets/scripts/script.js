@@ -69,11 +69,17 @@ const testimonials = document.querySelectorAll(".testimonial");
       { category: "sport", src: "assets/images/charlice images/IMG-20250830-WA0033.jpg", caption: "Club Majorete" },
       {category:"sport",src:"assets/images/charlice images/IMG-20250830-WA0103.jpg",caption:"sport time for the small"},
       { category: "sport", src: "assets/images/charlice images/IMG-20250830-WA0036.jpg", caption: "Club scout" },
-      {category:"teachers",src:"assets/images/chalice images/IMG-20250830-WA0095.jpg",caption:"teachers"},
-      {category:"sport",src:"assets/images/chalice images/IMG-20250830-WA0058.jpg",caption:"Sport club"},
-      {category:"teachers",src:"./assets/images/chalice images/IMG-20250830-WA0096.jpg",caption:"chalice teachers playing football"},
-      { category: "education", src: "https://picsum.photos/id/1005/600/400", caption: "Education 1" },
-      { category: "education", src: "https://picsum.photos/id/1015/600/400", caption: "Education 2" },
+      { category: "sport", src: "/assets/images/charlice images/IMG-20250830-WA0108.jpg", caption: "Club majorete" },
+      {category:"all",src:"assets/images/charlice images/IMG-20250830-WA0024.jpg",caption:"the leaders of tomorow"},
+      {category:"all",src:"assets/images/charlice images/IMG-20250830-WA0023.jpg",caption:"leaders of tomorow"},
+      {category:"sport",src:"assets/images/charlice images/IMG-20250830-WA0039.jpg",caption:"club majoret"},
+      {category:"teacher",src:"assets/images/charlice images/IMG-20250830-WA0095.jpg",caption:"chalice teacher"},
+      {category:"playground",src:"assets/images/new images/IMG_20250911_132849.jpg",caption:"playground"},
+      {category:"playground",src:"assets/images/new images/IMG_20250911_132947.jpg",caption:"playground"},
+      {category:"playground",src:"assets/images/new images/IMG_20250911_132947.jpg",caption:"playground"},
+      {category:"life",src:"assets/images/new images/IMG_20250911_133300.jpg",caption:"life in chalice"},
+      {category:"break",src:"assets/images/new images/IMG_20250908_075733.jpg",caption:"What happens during break?"},
+      
     ];
 
     const gallery = document.getElementById("gallery");
@@ -246,19 +252,19 @@ searchInput.addEventListener('keyup', (e) => {
       })
 
       
-         gsap.to(".const",{
-        clipPath:"circle(100% at 50% 50%)",
-        opacity:1,
-        markers:true,
-        scrollTrigger:{
-            trigger:".education",
-            start:"top top",
-            end:"bottom bottom",
-            scrub:2,
-            pin:true,
-            markers:true
-        }
-      })
+      //    gsap.to(".const",{
+      //   clipPath:"circle(100% at 50% 50%)",
+      //   opacity:1,
+      //   markers:true,
+      //   scrollTrigger:{
+      //       trigger:".education",
+      //       start:"top top",
+      //       end:"bottom bottom",
+      //       scrub:2,
+      //       pin:true,
+      //       markers:true
+      //   }
+      // })
 
     
       const videos = document.querySelectorAll("video")
@@ -278,30 +284,33 @@ searchInput.addEventListener('keyup', (e) => {
         markers:true,
       })
 
-      discover_tl.to(".cards1",{
-        y:35,
+
+      
+
+      // discover_tl.to(".cards1",{
+      //   y:35,
         
-      })
-      discover_tl.to(".cards2",{
-        y:35,
+      // })
+      // discover_tl.to(".cards2",{
+      //   y:35,
 
-      })
-      discover_tl.to(".cards3",{
-        y:35,
+      // })
+      // discover_tl.to(".cards3",{
+      //   y:35,
 
-      })
-      discover_tl.to(".cards4",{
-        y:35,
+      // })
+      // discover_tl.to(".cards4",{
+      //   y:35,
 
-      })
-      discover_tl.to(".cards5",{
-        y:35,
+      // })
+      // discover_tl.to(".cards5",{
+      //   y:35,
 
-      })
-      discover_tl.to(".cards6",{
-        y:35,
+      // })
+      // discover_tl.to(".cards6",{
+      //   y:35,
 
-      })
+      // })
 
       let vt = gsap.timeline({
         scrollTrigger:{

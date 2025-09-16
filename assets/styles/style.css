@@ -6,6 +6,7 @@
 
 html{
     scroll-behavior: smooth;
+    
 }
 body{
     max-width: 100%;
@@ -28,13 +29,31 @@ a{
 header{
     top: 0;
     max-width: 100%;
-    height: 60px;
+    height: 68px;
     background-color: rgb(115, 249, 115);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-block: 5px;
     padding-inline: 40px;
+}
+
+.logo{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  /* transform: translateX(160px); */
+}
+
+.logo img{
+  width: 10vmin;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+
+.logo p{
+  font-size: clamp(1.5rem,3rem,5rem);
 }
 nav{
     top: 60px;
@@ -64,14 +83,26 @@ header,nav{
 }
 
 .home{
-    background-image: url("/assets/images/photo-1579651745194-ff4b0f1580d0.avif");
-    background-size: cover;
-    background-position:center center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    text-align: center;
+  background-size: cover;
+  background-position:50% center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  text-align: center;
+  animation: bgs 7s linear infinite;
+}
+
+@keyframes bgs{
+  0%{
+    background-image: url("/assets/images/chalice-bg-image.jpg");
+    background-position: top center;
+
+  }
+  100%{
+    background-image: url("/assets/images/chalice-bg-image.jpg");
+    background-position: center center; 
+  }
 }
 
 .home .textContainer{
@@ -662,111 +693,123 @@ nav.active ul{
     font-size: clamp(1rem,2vw,2rem);
 }
 
-/* TEAM SECTION */
-.Team {
-  max-width: 100%;
-  min-height: 100vh;
+.teamContainers{
+  width: 100%;
+  height: 90%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.teamTitle {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.teamTitle h2 {
-  font-size: clamp(2rem, 3vw, 4rem);
-  margin-bottom: 10px;
-}
-
-.teamTitle p {
-  font-size: clamp(1rem, 1.5vw, 1.8rem);
-  color: #666;
-}
-
-/* SLIDER CONTAINER */
-.teamContainer {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  gap: 30px;
-  padding-block: 10px;
-  overflow-y: hidden;
-  overflow-x: auto;
-
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-/* SCROLLBAR STYLING */
-.teamContainer::-webkit-scrollbar {
-  height: 10px;
-}
-
-.teamContainer::-webkit-scrollbar-thumb {
-  background: #7e7c7c;
-  border-radius: 20px;
-  display: none;
-}
-
-.teamContainer::-webkit-scrollbar-track {
-  background: #f0f0f0;
-}
-
-/* TEAM CARD */
-.teamCard {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 500px;
-  box-shadow: 0 0 5px gainsboro;
-  padding: 7px;
-  border-radius: .5rem;
-  background: #fff;
-  scroll-snap-align: start;
-  transition: transform 0.4s ease;
-}
-
-.teamCard:hover {
-  transform: translateY(-10px);
-}
-
-/* IMAGE */
-.teamCard .teamImage {
-  width: 100%;
-  height: 50%;
-  border-radius: .5rem;
-  overflow: hidden;
-}
-
-.teamCard .teamImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1s ease;
-}
-
-.teamCard:hover .teamImage img {
-  transform: scale(1.2);
-}
-
-/* CONTENT */
-.teamContent {
-  width: 100%;
-  height: 50%;
+.teamContainers div{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
-  padding: 15px;
-  line-height: 1.5;
-  font-size: clamp(0.6rem, 1.2vw, 1.2rem);
+  
+}
+.teamContainers div:first-child{
+  width: 40%;
+  height: 100%;
+}
+.teamContainers div:nth-child(2){
+  width: 40%;
+  height: 100%;
+}
+.teamContainers div:nth-child(2) img{
+    width: 80vmin;
+    height: 65vmin;
+    border-radius: 1rem;
 }
 
+.teamContainers div:first-child{
+  font-size: clamp(1.2rem,2vw,4rem);
+  line-height:clamp(1,2,3);
+}
+
+/* Loader Container */
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #d6e4ff);
+  font-family: "Poppins", sans-serif;
+  color: #2a2a72;
+}
+
+body{
+  position: relative;
+}
+
+
+
+/* Book Animation */
+.book {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 60px;
+  background: #2a2a72;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 60px;
+  background: #fff;
+  transform-origin: left center;
+  animation: flip 1.6s infinite ease-in-out;
+  border-left: 3px solid #2a2a72;
+}
+
+/* Animate pages one after another */
+.page:nth-child(1) { animation-delay: 0s; }
+.page:nth-child(2) { animation-delay: 0.4s; }
+.page:nth-child(3) { animation-delay: 0.8s; }
+
+@keyframes flip {
+  0%   { transform: rotateY(0); }
+  50%  { transform: rotateY(-180deg); }
+  100% { transform: rotateY(-180deg); }
+}
+
+/* Loading Text */
+.loader p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 1; }
+}
+
+
+@media only screen and (max-width:1000px) {
+
+    .teamContainers div:first-child{
+      width: 70%;
+      text-align: center;
+    }
+
+    .teamContainers div:nth-child(2){
+      margin-top: clamp(20px,30px,60px);
+    }
+    .teamContainers{
+      flex-direction: column;
+    }
+}
     .testimonials {
       width: 100%;
       min-height: 80vh;
@@ -1212,6 +1255,9 @@ nav.active ul{
     margin-top: 30px;
   }
 
+  body{
+    overflow-x: hidden;
+  }
   
   .contact-section {
     padding: 4rem 2rem;
@@ -1415,7 +1461,12 @@ nav.active ul{
         z-index: 1000;
         /* display: none; */
         transition: all .5s linear;
-        transform: translateX(100%);
+        transform: translateX(300%);
+    }
+
+    .logo{
+      display: none;
+      transform: translateX(0);
     }
 
     #google_translate_element {

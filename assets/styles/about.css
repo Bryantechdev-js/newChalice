@@ -11,6 +11,62 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
 }
+
+/* the generale eduction section styles */
+
+.educFlexContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:clamp(30px,59px,80px);
+}
+
+.bts{
+  padding-inline:clamp(1rem,2.5rem,4rem);
+  padding-block:clamp(0.5rem,0.8rem,2rem);
+  background-color: lightgreen;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.bts:hover{
+  color: white;
+  transform: scale(1.2);
+  box-shadow: 0 0 5px lightgray;
+}
+
+.educTImage img{
+  width: 80vmin;
+  height: 75vmin;
+  border-radius: 5rem;
+}
+
+.educTexts{
+  font-size: clamp(1rem,2vw,5rem);
+  line-height: clamp(0.8,2.3,3);
+}
+
+
+@media screen and (max-width:2524px) {
+    .educTImage img{
+      width: 70vmin;
+      height: 60vmin;
+    }
+}
+
+@media screen and (max-width:1028px) {
+    .educFlexContainer{
+      flex-direction: column-reverse;
+    }
+     .educTImage img{
+      width: 85vmin;
+      height: 80vmin;
+    }
+}
+
+/* .parts{
+     clip-path: circle(20% at 50% 50%);
+    opacity: 0;
+} */
 section{
     max-width: 100%;
     min-height: 100vh;
@@ -21,9 +77,9 @@ li{
     list-style: none;
 }
 
-nav.active{
-  /* transform: translateX(0); */
-  display: block;
+nav ul.active{
+  transform: translateX(0);
+  /* display: block; */
 }
   .toggleMenu svg{
         width: 30px;
@@ -129,6 +185,22 @@ header,nav{
       overflow: hidden;
     }
 
+    .but{
+      padding-inline: 40px;
+      padding-block: 12px;
+      background-color: lightgreen;
+      border-radius: 1rem;
+      margin-top: 18px;
+      cursor: pointer;
+      box-shadow:  0 0 6px lightgrey;
+      font-size: auto;
+    }
+
+    .gh{
+      display: inline;
+      padding-inline: 20px;
+      padding-block: 10px;
+    }
     .carousel-slide {
       position: absolute;
       inset: 0;
@@ -212,7 +284,7 @@ header,nav{
       }
       .carousel-slide img {
         position: relative;
-        height: auto;
+        height:100%;
       }
       .caption {
         position: absolute;
@@ -233,12 +305,11 @@ header,nav{
       }
     }
     @media screen and (max-width:831px){
-    .toggleMenu{
-        display: block;
-    }
-
+   
+    
     .toggleMenu svg{
-        width: 30px;
+      width: 30px;
+      display: block;
         height: 30px;
         cursor: pointer;
     }
@@ -260,9 +331,14 @@ header,nav{
         align-items: center;
         gap: 65px;
         z-index: 1000;
-        display: none;
+        /* display: none; */
+        transform: translateX(100%);
         transition: all .5s linear;
     }
+}
+
+.educardContainer.center{
+  justify-content: center;
 }
 
 .eduTitle{
@@ -561,11 +637,26 @@ header,nav{
 
     .playgroundText{
       width: 50%;
-      font-size: clamp(1.5rem,5vw,2rem);
       line-height: clamp(1,2,3);
-      width: 50%;
+      /* width: 50%; */
+    }
+    
+    .playgroundText .sep{
+      height: auto;
+      font-size: clamp(1.5rem,5vw,2rem);
+      overflow: hidden;
     }
 
+    .sep span{
+      /* transform: translateY(80px); */
+      opacity: 0;
+    }
+
+    
+
+    .playgroundImage img{
+      transform: translateX(-550px);
+    }
     /* .playgroundImage img{
       width: 50%;
       height: 60%;

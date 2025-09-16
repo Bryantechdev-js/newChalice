@@ -4,7 +4,7 @@
 
 const toggle  = function(){
   // alert(`runing`)
-  document.querySelector("nav").classList.toggle("active")
+  document.querySelector("nav ul").classList.toggle("active")
 }
 
 document.querySelector(".toggleMenu").addEventListener("click",()=>toggle())
@@ -28,13 +28,26 @@ searchInput.addEventListener('keyup', (e) => {
 
 
  const slidesData = [
-      { img: "https://picsum.photos/id/1015/1600/900", caption: "Primary School of Charlice - Assiduité, Travail, Réussite" },
-      { img: "https://picsum.photos/id/1016/1600/900", caption: "100% Success - Common Entrance & F.S.L.C" },
-      { img: "https://picsum.photos/id/1018/1600/900", caption: "Sports: Football, Basketball, Handball, Volleyball" },
-      { img: "https://picsum.photos/id/1020/1600/900", caption: "Optional Courses - Swimming & Tennis" },
-      { img: "https://picsum.photos/id/1024/1600/900", caption: "Technical Education: Tailoring, Mechanic, Electricity" },
-      { img: "https://picsum.photos/id/1035/1600/900", caption: "Secondary School Bilingual - Technical & General Education" },
-      { img: "https://picsum.photos/id/1037/1600/900", caption: "Modern Facilities: Library, Lab, Computer Room" }
+   { img:"assets/images/chalice-bg-image.jpg", caption: "chalice educational primary and secondary school" },
+   { img:"assets/images/new images/IMG_20250911_130529.jpg", caption: "Students in class" },
+   { img:"assets/images/new images/IMG_20250911_133258.jpg", caption: "Chalice primary and secondary school students" },
+   { img:"assets/images/new images/IMG_20250911_123736.jpg", caption: "we train student to become smart" },
+   { img:"assets/images/new images/IMG_20250911_130556.jpg", caption: "Students in class" },
+   { img:"assets/images/new images/IMG_20250911_124039.jpg", caption: "Students in class" },
+   { img:"assets/images/new images/IMG_20250911_124800.jpg", caption: "Students in class" },
+   { img:"assets/images/new images/IMG_20250911_125144.jpg", caption: "Students in class" },
+   { img:"assets/images/charlice images/IMG_20250911_131524.jpg", caption: "chalice educational primary and secondary school" },
+      { img: "assets/images/charlice images/IMG-20250830-WA0028.jpg", caption: "Chalice prety majoret club" },
+      { img: "assets/images/charlice images/IMG-20250830-WA0108.jpg", caption: "mini Majorete of chalice" },
+      { img: "assets/images/PXL_20250830_091654090.jpg", caption: "Chalice teacher" },
+      { img: "assets/images/PXL_20250830_091646342.jpg", caption: "Chalice teacher" },
+      { img: "assets/images/new images/IMG_20250908_075733.jpg", caption: "chalice  Feeding center" },
+      { img: "assets/images/new images/IMG_20250911_132951.jpg", caption: "chalice playground" },
+      { img: "assets/images/new images/IMG_20250911_132947.jpg", caption: "chalice playground" },
+      { img: "assets/images/new images/IMG_20250911_132849.jpg", caption: "chalice playground" },
+      { img: "assets/images/new images/IMG_20250911_132947.jpg", caption: "chalice playground" },
+      { img: "assets/images/charlice images/IMG_20250911_133448.jpg", caption: "chalice Feeding center" },
+      { img: "assets/images/charlice images/IMG_20250911_133300_1.jpg", caption: "Social life in chalice" }
     ];
 
     const carousel = document.getElementById("carousel");
@@ -44,7 +57,7 @@ searchInput.addEventListener('keyup', (e) => {
       slideDiv.classList.add("carousel-slide");
       if(index === 0) slideDiv.classList.add("active");
 
-      slideDiv.innerHTML = `
+      slideDiv.innerHTML = ` 
         <img src="${slide.img}" alt="slide ${index+1}">
         <div class="caption">${slide.caption}</div>
       `;
@@ -231,4 +244,38 @@ publish()
 //   x:0
 // })
 
+//animating all the sections
 
+document.querySelectorAll(".parts").forEach(el =>{
+  let sec = gsap.timeline({
+    scrollTrigger:{
+      trigger:el,
+      start:"top top",
+      end:"bottom bottom",
+      scrub:true,
+      duration:1
+    }
+  })
+
+  sec.to(el,{
+    clipPath:"circle(100% at 50% 50%)",
+    opacity:1
+  })
+})
+
+
+//playground gsap animation
+
+gsap.to(".playgroundImage img",{
+  x:0,
+})
+
+gsap.to(".sep span",{
+  opacity:1,
+  stagger:true,
+  delay:1
+})
+
+
+
+      
