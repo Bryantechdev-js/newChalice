@@ -503,6 +503,8 @@ nav.active ul{
         background-size: cover;
         background-position:center center;
         animation: bg 7s 1s linear infinite;
+        background-image: url("/assets/images/football.jpg");
+        animation-delay: 4s;
         background-clip: text;
         background-attachment: fixed ;
         color: transparent;
@@ -1395,10 +1397,10 @@ body{
 
 @keyframes bg{
     0%{
-           background-image: url("/assets/images/10620005.png");
+           background-image: url("/assets/images/basketball.webp");
     }
     100%{
-        background-image: url("/assets/images/10620008.png");
+        background-image: url("/assets/images/football.jpg");
     }
 }
 
