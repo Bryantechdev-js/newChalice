@@ -337,18 +337,16 @@ nav.active ul{
 
 .const{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap; /* wrap cards on smaller screens */
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     gap: 20px;
     padding: 1rem 0;
 }
 
 .cards{
-    flex: 1 1 250px; /* flexible width with minimum 250px */
-    max-width: 300px;
-    height: auto; 
+    /* flex: 1 1 250px; /* flexible width with minimum 250px */
+    /* max-width: 300px; */
+    /* height: auto;  */
     background:white;
     margin: 10px;
     padding: 10px;

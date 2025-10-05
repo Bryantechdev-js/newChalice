@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+  }
+
 html{
     scroll-behavior: smooth;
 }
@@ -62,7 +63,7 @@ body{
       height: 80vmin;
     }
 }
-
+/* testing more shortCute */
 /* .parts{
      clip-path: circle(20% at 50% 50%);
     opacity: 0;
@@ -352,13 +353,13 @@ header,nav{
     height: 80%;
     margin-top: clamp(15px,100px,300px);
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(550px,1fr));
     justify-content: center;
     align-items: center;
 }
 
 .edcards{
-    height: 550px;
+    height: 650px;
     /* background-color: #4caf50; */
     box-shadow: 0 0 5px gainsboro;
     border-radius: 1rem;
@@ -371,7 +372,6 @@ header,nav{
 .edcards:hover{
     transform: translateY(-35px);
 }
-
 .eduImage{
     width: 100%;
     height: 50%;
@@ -393,7 +393,7 @@ header,nav{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-size: clamp(1rem,1vw,2rem);
+    font-size: clamp(1rem,2vw,2rem);
     line-height: clamp(0.5,1.5,2);
 }
 
@@ -666,7 +666,7 @@ header,nav{
 
     .playgroundImage img{
         width: 90vmin;
-        height: 90vmin;
+        height: 80vmin;
     }
     
     .ch{
@@ -675,7 +675,6 @@ header,nav{
 
 
     /* footer styles */
-
     .site-footer {
     background: #fff;
     color: #333;
@@ -863,14 +862,15 @@ header,nav{
     text-align: center;
     line-height: clamp(0.5,1.5,2);
   }
-
   .examtext h2{
     font-size: clamp(1rem,1.5rem,2rem);
   }
 
   
 }
-
+  .table{
+    grid-template-columns: auto;
+  }
 @media screen and (max-width:2283px) {
     .examImage img{
       width: 70vmin;
