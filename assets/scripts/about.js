@@ -29,25 +29,16 @@ searchInput.addEventListener('keyup', (e) => {
 
  const slidesData = [
    { img:"assets/images/chalice-bg-image.jpg", caption: "chalice educational primary and secondary school" },
-   { img:"assets/images/new images/IMG_20250911_130529.jpg", caption: "Students in class" },
-   { img:"assets/images/new images/IMG_20250911_133258.jpg", caption: "Chalice primary and secondary school students" },
-   { img:"assets/images/new images/IMG_20250911_123736.jpg", caption: "we train student to become smart" },
-   { img:"assets/images/new images/IMG_20250911_130556.jpg", caption: "Students in class" },
+   { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638471/chaliceTeacher2_utzzhv.jpg", caption: "Students in class" },
+   { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638219/IMG_20250911_133300_1_wy49uv.jpg", caption: "Chalice primary and secondary school students" },
+   { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638451/chaliceStudentsInClass2_jvpdme.jpg", caption: "Students in class" },
    { img:"assets/images/new images/IMG_20250911_124039.jpg", caption: "Students in class" },
-   { img:"assets/images/new images/IMG_20250911_124800.jpg", caption: "Students in class" },
-   { img:"assets/images/new images/IMG_20250911_125144.jpg", caption: "Students in class" },
-   { img:"assets/images/charlice images/IMG_20250911_131524.jpg", caption: "chalice educational primary and secondary school" },
-      { img: "assets/images/charlice images/IMG-20250830-WA0028.jpg", caption: "Chalice prety majoret club" },
-      { img: "assets/images/charlice images/IMG-20250830-WA0108.jpg", caption: "mini Majorete of chalice" },
-      { img: "assets/images/PXL_20250830_091654090.jpg", caption: "Chalice teacher" },
-      { img: "assets/images/PXL_20250830_091646342.jpg", caption: "Chalice teacher" },
-      { img: "assets/images/new images/IMG_20250908_075733.jpg", caption: "chalice  Feeding center" },
-      { img: "assets/images/new images/IMG_20250911_132951.jpg", caption: "chalice playground" },
-      { img: "assets/images/new images/IMG_20250911_132947.jpg", caption: "chalice playground" },
-      { img: "assets/images/new images/IMG_20250911_132849.jpg", caption: "chalice playground" },
-      { img: "assets/images/new images/IMG_20250911_132947.jpg", caption: "chalice playground" },
-      { img: "assets/images/charlice images/IMG_20250911_133448.jpg", caption: "chalice Feeding center" },
-      { img: "assets/images/charlice images/IMG_20250911_133300_1.jpg", caption: "Social life in chalice" }
+   { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638432/chaliceStudentInClass_ngb323.jpg", caption: "Students in class" },
+      { img: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638120/chaliceMajorete2_lk7tgt.jpg", caption: "Chalice prety majoret club" },
+      { img: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638188/charliceMainTeacher_jkcjsm.jpg", caption: "mini Majorete of chalice" },
+      { img: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638296/chaliceFeedingGround_iqp398.jpg", caption: "chalice  Feeding center" },
+      { img: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638330/chalicePlayground2_btug7p.jpg", caption: "chalice playground" },
+      { img: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638314/chalicePlayground_vjdk3b.jpg", caption: "chalice playground" },
     ];
 
     const carousel = document.getElementById("carousel");

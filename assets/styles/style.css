@@ -347,6 +347,7 @@ nav.active ul{
     /* flex: 1 1 250px; /* flexible width with minimum 250px */
     /* max-width: 300px; */
     /* height: auto;  */
+    height: 650px;
     background:white;
     margin: 10px;
     padding: 10px;
@@ -368,6 +369,10 @@ nav.active ul{
   /* border: 1px solid; */
 }
 
+.cardImage.T{
+  height: 80%;
+}
+
 .cardImage img{
     width: 100%;
     height: 100%;
@@ -377,17 +382,18 @@ nav.active ul{
 
 .cardContent{
     padding: 10px;
+    /* line-height:4; */
 }
 
 .cardContent .class{
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: #32cd72;
 }
 
 .cardContent p{
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-size: clamp(0.9rem, 2vw, 3rem);
     margin-bottom: 0.7rem;
 }
 
@@ -501,7 +507,7 @@ nav.active ul{
         background-size: cover;
         background-position:center center;
         animation: bg 7s 1s linear infinite;
-        background-image: url("/assets/images/football.jpg");
+        background-image: url("https://res.cloudinary.com/darpyj4ff/image/upload/v1759638580/football_zajoe7.jpg");
         animation-delay: 4s;
         background-clip: text;
         background-attachment: fixed ;
@@ -1395,10 +1401,10 @@ body{
 
 @keyframes bg{
     0%{
-           background-image: url("/assets/images/basketball.webp");
+           background-image: url("https://res.cloudinary.com/darpyj4ff/image/upload/v1759638561/basketball_rekqpz.webp");
     }
     100%{
-        background-image: url("/assets/images/football.jpg");
+        background-image: url("https://res.cloudinary.com/darpyj4ff/image/upload/v1759638580/football_zajoe7.jpg");
     }
 }
 

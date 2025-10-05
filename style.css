@@ -1395,10 +1395,10 @@ body{
 
 @keyframes bg{
     0%{
-           background-image: url("/assets/images/10620005.png");
+           background-image: url("https://res.cloudinary.com/darpyj4ff/image/upload/v1759638561/basketball_rekqpz.webp");
     }
     100%{
-        background-image: url("/assets/images/10620008.png");
+        background-image: url("https://res.cloudinary.com/darpyj4ff/image/upload/v1759638580/football_zajoe7.jpg");
     }
 }
 

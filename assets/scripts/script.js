@@ -66,19 +66,16 @@ const testimonials = document.querySelectorAll(".testimonial");
 
     // Gallery data
     const galleryData = [
-      { category: "sport", src: "assets/images/charlice images/IMG-20250830-WA0033.jpg", caption: "Club Majorete" },
-      {category:"sport",src:"assets/images/charlice images/IMG-20250830-WA0103.jpg",caption:"sport time for the small"},
-      { category: "sport", src: "assets/images/charlice images/IMG-20250830-WA0036.jpg", caption: "Club scout" },
-      { category: "sport", src: "/assets/images/charlice images/IMG-20250830-WA0108.jpg", caption: "Club majorete" },
-      {category:"all",src:"assets/images/charlice images/IMG-20250830-WA0024.jpg",caption:"the leaders of tomorow"},
-      {category:"all",src:"assets/images/charlice images/IMG-20250830-WA0023.jpg",caption:"leaders of tomorow"},
-      {category:"sport",src:"assets/images/charlice images/IMG-20250830-WA0039.jpg",caption:"club majoret"},
-      {category:"teacher",src:"assets/images/charlice images/IMG-20250830-WA0095.jpg",caption:"chalice teacher"},
-      {category:"playground",src:"assets/images/new images/IMG_20250911_132849.jpg",caption:"playground"},
-      {category:"playground",src:"assets/images/new images/IMG_20250911_132947.jpg",caption:"playground"},
-      {category:"playground",src:"assets/images/new images/IMG_20250911_132947.jpg",caption:"playground"},
-      {category:"life",src:"assets/images/new images/IMG_20250911_133300.jpg",caption:"life in chalice"},
-      {category:"break",src:"assets/images/new images/IMG_20250908_075733.jpg",caption:"What happens during break?"},
+      { category: "sport", src: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638120/chaliceMajorete2_lk7tgt.jpg", caption: "Club Majorete" },
+      {category:"sport",src:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638256/IMG-20250830-WA0115_es5uzk.jpg",caption:"sport time for the small"},
+      { category: "sport", src: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638165/chaliceScote_nur3mn.jpg", caption: "Club scout" },
+      { category: "sport", src: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638188/charliceMainTeacher_jkcjsm.jpg", caption: "Club majorete" },
+      {category:"education",src:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638451/chaliceStudentsInClass2_jvpdme.jpg",caption:"classroom"},
+      {category:"education",src:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638510/teacher1_azwhjz.jpg",caption:"classroom"},
+      {category:"playground",src:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638330/chalicePlayground2_btug7p.jpg",caption:"playground"},
+      {category:"playground",src:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638314/chalicePlayground_vjdk3b.jpg",caption:"playground"},
+      {category:"life",src:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638219/IMG_20250911_133300_1_wy49uv.jpg",caption:"life in chalice"},
+      {category:"break",src:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638296/chaliceFeedingGround_iqp398.jpg",caption:"What happens during break?"},
       
     ];
 
