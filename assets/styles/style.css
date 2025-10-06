@@ -91,16 +91,17 @@ header,nav{
   align-items: end;
   text-align: center;
   animation: bgs 7s linear infinite;
+  /* background-color: whitesmoke; */
 }
 
 @keyframes bgs{
   0%{
-    background-image: url("/assets/images/chalice-bg-image.jpg");
+    background-image: url("https://res.cloudinary.com/darpyj4ff/image/upload/v1759639827/Gemini_Generated_Image_4fhjat4fhjat4fhj_1_k1pdbe.png");
     background-position: top center;
 
   }
   100%{
-    background-image: url("/assets/images/chalice-bg-image.jpg");
+    background-image: url("https://res.cloudinary.com/darpyj4ff/image/upload/v1759639827/Gemini_Generated_Image_4fhjat4fhjat4fhj_1_k1pdbe.png");
     background-position: center center; 
   }
 }

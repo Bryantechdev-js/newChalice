@@ -28,11 +28,10 @@ searchInput.addEventListener('keyup', (e) => {
 
 
  const slidesData = [
-   { img:"assets/images/chalice-bg-image.jpg", caption: "chalice educational primary and secondary school" },
+   { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759639827/Gemini_Generated_Image_4fhjat4fhjat4fhj_1_k1pdbe.png", caption: "chalice educational primary and secondary school" },
    { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638471/chaliceTeacher2_utzzhv.jpg", caption: "Students in class" },
    { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638219/IMG_20250911_133300_1_wy49uv.jpg", caption: "Chalice primary and secondary school students" },
    { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638451/chaliceStudentsInClass2_jvpdme.jpg", caption: "Students in class" },
-   { img:"assets/images/new images/IMG_20250911_124039.jpg", caption: "Students in class" },
    { img:"https://res.cloudinary.com/darpyj4ff/image/upload/v1759638432/chaliceStudentInClass_ngb323.jpg", caption: "Students in class" },
       { img: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638120/chaliceMajorete2_lk7tgt.jpg", caption: "Chalice prety majoret club" },
       { img: "https://res.cloudinary.com/darpyj4ff/image/upload/v1759638188/charliceMainTeacher_jkcjsm.jpg", caption: "mini Majorete of chalice" },
