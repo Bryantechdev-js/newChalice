@@ -359,7 +359,7 @@ const publish = function(){
     if(indx > 2){ indx = 0}
     publish()
     indx+=1
-  },10500)
+  },10900)
 }
 publish()
 

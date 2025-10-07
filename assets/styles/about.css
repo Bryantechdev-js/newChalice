@@ -86,7 +86,7 @@ nav ul.active{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 3;
+  line-height: 2;
 }
   .toggleMenu svg{
         width: 30px;
