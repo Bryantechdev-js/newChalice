@@ -183,20 +183,20 @@ pt.to([".oooo1",".oooo2",".oooo3",".oooo4"],{
 
 
 
-let pt = gsap.timeline({
-  scrollTrigger:{
-    trigger:".panel",
-    start:"top center",
-    end:"bottom bottom",
-    duration:1,
-    scrub:true
-  }
-})
+// let pt = gsap.timeline({
+//   scrollTrigger:{
+//     trigger:".panel",
+//     start:"top center",
+//     end:"bottom bottom",
+//     duration:1,
+//     scrub:true
+//   }
+// })
 
-pt.to(".sportContainer",{
-   opacity:1,
-  clipPath:"circle(100% at 50% 50%)"
-})
+// pt.to(".sportContainer",{
+//    opacity:1,
+//   clipPath:"circle(100% at 50% 50%)"
+// })
 
 
 let promo =[
@@ -214,25 +214,25 @@ const publish = function(){
   },3000)
 }
 publish()
-pt.to(".o:nth-child(1)",{
-  y:0
-})
+// pt.to(".o:nth-child(1)",{
+//   y:0
+// })
 
-let playground = gsap.timeline({
-  scroollTrigger:{
-    trigger:".yy",
-    start:"top center",
-    end:"bottom bottom",
-    scrub:true,
-    duration:1
-  }
-})
+// let playground = gsap.timeline({
+//   scroollTrigger:{
+//     trigger:".yy",
+//     start:"top center",
+//     end:"bottom bottom",
+//     scrub:true,
+//     duration:1
+//   }
+// })
 
-playground.fromTo(".ch img",{
-  x:-1500,
-},{
-  x:0
-})
+// playground.fromTo(".ch img",{
+//   x:-1500,
+// },{
+//   x:0
+// })
 
 //animating all the sections
 
