@@ -6,6 +6,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     max-width: 100%;
@@ -80,7 +81,12 @@ li{
 
 nav ul.active{
   transform: translateX(0);
-  /* display: block; */
+  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3;
 }
   .toggleMenu svg{
         width: 30px;
@@ -320,31 +326,33 @@ header,nav{
       position: relative;
     }
 
-    @media screen and (max-width:1000px) {
-      .but{
-        margin-top: min(100px,200px,500px);
-      }
-    }
-
+    
     nav ul{
-        position: absolute;
-        top: 0px;
-        right: 0;
-        flex-direction: column;
-        width: 50%;
-        height: 100vh;
-        box-shadow:  0 0 5px gainsboro;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 65px;
-        z-index: 1000;
-        /* display: none; */
-        transform: translateX(100%);
-        transition: all .5s linear;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      flex-direction: column;
+      width: 50%;
+      height: 100vh;
+      box-shadow:  0 0 5px gainsboro;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 65px;
+      z-index: 1000;
+      display: none;
+      transform: translateX(200%);
+      transition: all .5s linear;
     }
-}
+  }
+
+  /* adding a magin top to the button on small devices */
+  @media screen and (max-width:1000px) {
+    .but{
+      margin-top: min(100px,200px,500px);
+    }
+  }
 
 .educardContainer.center{
   justify-content: center;

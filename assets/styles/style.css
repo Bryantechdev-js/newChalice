@@ -6,6 +6,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
     
 }
 body{
@@ -190,6 +191,12 @@ header,nav{
 
 nav.active ul{
     transform: translateX(0);
+    display: inline;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3;
 }
 
 
@@ -1469,6 +1476,7 @@ body{
         /* display: none; */
         transition: all .5s linear;
         transform: translateX(300%);
+        display: none;
     }
 
     .logo{
