@@ -629,6 +629,7 @@ header,nav{
     .playground p{
       font-size: clamp(1rem,1.8rem,2rem);
       letter-spacing: 1;
+      margin-bottom:clamp(20px,40px,60px);
     }
     .playground :is(h2,p){
       text-align: center;
@@ -651,7 +652,7 @@ header,nav{
     
     .playgroundText .sep{
       height: auto;
-      font-size: clamp(1.5rem,5vw,2rem);
+      font-size: clamp(1.5rem,5vw,3rem);
       overflow: hidden;
     }
 
@@ -664,6 +665,9 @@ header,nav{
 
     .playgroundImage img{
       transform: translateX(-550px);
+      /* height:50px; */
+      border-radius: 2rem;
+      height:40vh;
     }
     /* .playgroundImage img{
       width: 50%;
