@@ -320,8 +320,6 @@ nav.active ul{
 
 
 .education{
-    z-index: 0;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -468,6 +466,7 @@ nav.active ul{
         justify-content: center;
         align-items: center;
         position: relative;
+        /* margin-top: 300px; */
     }
     .one{
         display: flex;
@@ -816,6 +815,7 @@ body{
     .teamContainers{
       flex-direction: column;
     }
+
 }
     .testimonials {
       width: 100%;
@@ -1500,9 +1500,6 @@ body{
 }
 
 @media screen and (max-width:822px){
-    .const div{
-        display: none;
-    }
     .lager{
         display: block;
     }

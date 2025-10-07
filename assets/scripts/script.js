@@ -264,22 +264,22 @@ searchInput.addEventListener('keyup', (e) => {
       // })
 
     
-      const videos = document.querySelectorAll("video")
-       const discover_tl = gsap.timeline({
-        scrollTrigger:{
-            trigger: ".education",
-            scrub:2,
-            start:"top 20%",
-            end:"buttom buttom",
-            ease:"ease",markers:true,
+      // const videos = document.querySelectorAll("video")
+      //  const discover_tl = gsap.timeline({
+      //   scrollTrigger:{
+      //       trigger: ".education",
+      //       scrub:2,
+      //       start:"top 20%",
+      //       end:"buttom buttom",
+      //       ease:"ease",markers:true,
             
-        }
-      })
-      discover_tl.to(".const",{
-        clipPath:"circle(100% at 50% 50%)",
-        opacity:1,
-        markers:true,
-      })
+      //   }
+      // })
+      // discover_tl.to(".const",{
+      //   clipPath:"circle(100% at 50% 50%)",
+      //   opacity:1,
+      //   markers:true,
+      // })
 
 
       
@@ -309,34 +309,6 @@ searchInput.addEventListener('keyup', (e) => {
 
       // })
 
-      let vt = gsap.timeline({
-        scrollTrigger:{
-          trigger:".sportVideo",
-          start:"top 20%",
-          end:"bottom bottom",
-          scrub:true,
-        }
-      })
-      
-     vt.to(".video1",{
-      y:0,
-      clipPath:"circle(100% at 50% 50%)",
-      onStart: ()=> document.querySelector(".video1").play()
-     })
-
-     vt.to(".video2",{
-      y:0,
-      clipPath:"circle(100% at 50% 50%)",
-      delay:20,
-      onStart: ()=> document.querySelector(".video2").play()
-     })
-
-     vt.to(".video3",{
-      y:0,
-      clipPath:"circle(100% at 50% 50%)",
-      delay:40,
-      onStart: ()=> document.querySelector(".video3").play()
-     })
      
 
      let evt = gsap.timeline({
