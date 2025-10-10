@@ -1513,3 +1513,432 @@ body{
         display: block;
     }
 }
+
+/* ===== COMPREHENSIVE RESPONSIVE DESIGN ===== */
+
+/* Mobile First - Extra Small Devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+    /* Header adjustments */
+    header {
+        padding-inline: 15px;
+        height: 60px;
+    }
+    
+    .searchbar {
+        max-width: 35px;
+        height: 35px;
+    }
+    
+    .searchbar.active {
+        max-width: 200px;
+        height: 40px;
+    }
+    
+    .socialIcons {
+        gap: 8px;
+    }
+    
+    .socialIcons svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Navigation */
+    nav {
+        padding-inline: 15px;
+        height: 25px;
+    }
+    
+    nav ul {
+        gap: 20px;
+        width: 70%;
+    }
+    
+    /* Sections */
+    section {
+        padding-inline: 15px;
+        padding-block: 10px;
+    }
+    
+    /* Home section */
+    .home .textContainer {
+        padding: 20px;
+    }
+    
+    .home .textContainer h1 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+    
+    .home .textContainer button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    /* About section */
+    .about .aboutText {
+        font-size: clamp(0.9rem, 4vw, 1.2rem);
+        line-height: 1.4;
+    }
+    
+    .about .aboutImage {
+        width: 95%;
+        height: 300px;
+        margin-block: 15px;
+    }
+    
+    /* Education section */
+    .education {
+        padding: 1rem 15px;
+    }
+    
+    .const {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .cards {
+        height: auto;
+        min-height: 400px;
+        margin: 5px 0;
+    }
+    
+    .cardImage {
+        height: 200px;
+    }
+    
+    .cardContent {
+        padding: 15px 10px;
+    }
+    
+    .cardContent .class {
+        font-size: 1.2rem;
+    }
+    
+    .cardContent p {
+        font-size: 0.9rem;
+    }
+    
+    /* Sport section */
+    .sport {
+        padding: 20px 15px;
+    }
+    
+    .one video {
+        width: 150px;
+    }
+    
+    .sport marquee {
+        font-size: clamp(1rem, 6vw, 2rem);
+    }
+    
+    /* Event section */
+    .table-container {
+        padding: 10px;
+    }
+    
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 6px 4px;
+        font-size: 11px;
+    }
+    
+    /* Team section */
+    .teamContainers div:nth-child(2) img {
+        width: 90vw;
+        height: 50vw;
+        max-height: 300px;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+        padding: 30px 15px;
+    }
+    
+    .testimonialSlider {
+        height: 300px;
+    }
+    
+    .testimonial {
+        padding: 15px;
+    }
+    
+    .testimonial img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .navBtn {
+        display: none;
+    }
+    
+    /* Gallery */
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .tabs {
+        gap: 10px;
+    }
+    
+    .tab {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* FAQ */
+    .faq-section {
+        padding: 2rem 15px;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+    }
+    
+    /* Contact */
+    .contact-section {
+        padding: 2rem 15px;
+    }
+    
+    /* Footer */
+    .site-footer {
+        padding: 30px 15px 15px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-about, .footer-links, .footer-newsletter, .footer-social {
+        min-width: 100%;
+    }
+}
+
+/* Small Devices - Mobile (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Header */
+    header {
+        padding-inline: 25px;
+    }
+    
+    .searchbar.active {
+        max-width: 220px;
+    }
+    
+    /* Sections */
+    section {
+        padding-inline: 25px;
+    }
+    
+    /* Home */
+    .home .textContainer {
+        padding: 30px;
+    }
+    
+    /* Education */
+    .const {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .cards {
+        height: 500px;
+    }
+    
+    /* Gallery */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    /* Team section */
+    .teamContainers div:nth-child(2) img {
+        width: 70vw;
+        height: 45vw;
+        max-height: 350px;
+    }
+}
+
+/* Medium Devices - Tablet (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Header */
+    header {
+        padding-inline: 30px;
+    }
+    
+    /* Sections */
+    section {
+        padding-inline: 30px;
+    }
+    
+    /* Education */
+    .const {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .cards {
+        height: 550px;
+    }
+    
+    /* About section - already handled above */
+    
+    /* Gallery */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    
+    /* Team section adjustments */
+    .teamContainers div:first-child {
+        width: 60%;
+    }
+    
+    .teamContainers div:nth-child(2) img {
+        width: 60vw;
+        height: 40vw;
+        max-height: 400px;
+    }
+}
+
+/* Large Devices - Desktop (1025px - 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Optimize for standard desktop */
+    .const {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .cards {
+        height: 600px;
+    }
+    
+    /* Gallery */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    .footer-container {
+        max-width: 1200px;
+    }
+}
+
+/* Extra Large Devices - Large Desktop (1441px+) */
+@media screen and (min-width: 1441px) {
+    /* Prevent content from becoming too wide */
+    .const {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .gallery {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .footer-container {
+        max-width: 1400px;
+    }
+    
+    /* Limit section width for better readability */
+    .about, .testimonials, .faq-section, .contact-section {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .home {
+        min-height: 70vh;
+    }
+    
+    .home .textContainer {
+        padding: 15px;
+    }
+    
+    .home .textContainer h1 {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+    
+    section {
+        min-height: auto;
+        padding-block: 20px;
+    }
+    
+    .about .aboutImage {
+        height: 250px;
+    }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2), 
+       screen and (min-resolution: 192dpi) {
+    /* Ensure images and icons remain crisp */
+    .logo img, .socialIcons svg, .cardImage img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+    header, nav, .toggleMenu, .socialIcons, .searchbar {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        padding: 20px;
+    }
+    
+    .home {
+        background: none !important;
+        color: black !important;
+    }
+    
+    .cards {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .home {
+        animation: none;
+        background-attachment: scroll;
+    }
+    
+    .sportImage {
+        animation: none;
+        background-attachment: scroll;
+    }
+}
+
+/* Focus improvements for keyboard navigation */
+@media (prefers-reduced-motion: no-preference) {
+    a:focus, button:focus, input:focus, textarea:focus {
+        outline: 2px solid #32cd72;
+        outline-offset: 2px;
+    }
+}
+
+/* Dark mode support (if user prefers) */
+@media (prefers-color-scheme: dark) {
+    /* Keep your existing light theme as default */
+    /* This is just a placeholder for future dark mode implementation */
+}
