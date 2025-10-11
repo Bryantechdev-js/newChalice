@@ -268,4 +268,50 @@ gsap.to(".sep span",{
 
 
 
-      
+// Loading Animation Handler
+window.addEventListener('load', function() {
+    const loader = document.getElementById('flipLoader');
+    const progressBar = document.getElementById('progressBar');
+    const body = document.body;
+    
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress > 100) progress = 100;
+        
+        progressBar.style.width = progress + '%';
+        
+        if (progress >= 100) {
+            clearInterval(progressInterval);
+            
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                body.classList.remove('loading');
+                
+                setTimeout(() => {
+                    if (loader.parentNode) {
+                        loader.parentNode.removeChild(loader);
+                    }
+                }, 500);
+            }, 800);
+        }
+    }, 200);
+});
+
+setTimeout(() => {
+    const loader = document.getElementById('flipLoader');
+    const body = document.body;
+    
+    if (loader && loader.style.visibility !== 'hidden') {
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+        body.classList.remove('loading');
+        
+        setTimeout(() => {
+            if (loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+            }
+        }, 500);
+    }
+}, 5000);

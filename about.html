@@ -25,6 +25,7 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" as="script">
     
     <link rel="stylesheet" href="/assets/styles/about.css">
+    <link rel="stylesheet" href="/assets/styles/flip-loader.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Font Awesome -->
@@ -36,9 +37,27 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js" defer></script>
+    <script src="https://unpkg.com/flip-toolkit@7.1.0/lib/index.js"></script>
     <script type="module" src="./assets/scripts/about.js" defer></script>
 </head>
-<body>
+<body class="loading">
+    <!-- Loading Animation -->
+    <div id="flipLoader">
+        <div class="flip-container">
+            <div class="flip-book">
+                <div class="flip-page"></div>
+                <div class="flip-page"></div>
+                <div class="flip-page"></div>
+            </div>
+            <div class="flip-text">
+                <h2>Loading Chalice</h2>
+                <p>Preparing your educational journey...</p>
+                <div class="flip-progress">
+                    <div class="flip-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
      <header>
        <!-- 🔍 Search Bar in Navbar -->
 <div class="searchbar">

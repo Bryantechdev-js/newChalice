@@ -1,0 +1,138 @@
+/* ===== FLIP.JS LOADING ANIMATION ===== */
+
+#flipLoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 50%, #e6f3ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    font-family: 'Arial', sans-serif;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.flip-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.flip-book {
+    position: relative;
+    width: 100px;
+    height: 70px;
+    perspective: 1000px;
+}
+
+.flip-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 70px;
+    background: #ffffff;
+    border: 2px solid #32cd72;
+    border-radius: 8px;
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    box-shadow: 0 4px 15px rgba(50, 205, 114, 0.2);
+}
+
+.flip-page:nth-child(1) {
+    animation: flipPage 2s infinite ease-in-out;
+    animation-delay: 0s;
+}
+
+.flip-page:nth-child(2) {
+    animation: flipPage 2s infinite ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.flip-page:nth-child(3) {
+    animation: flipPage 2s infinite ease-in-out;
+    animation-delay: 0.8s;
+}
+
+@keyframes flipPage {
+    0%, 20% { transform: rotateY(0deg); }
+    50% { transform: rotateY(-180deg); }
+    80%, 100% { transform: rotateY(-180deg); }
+}
+
+.flip-text h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #32cd72;
+    margin-bottom: 10px;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+.flip-text p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.flip-progress {
+    width: 250px;
+    height: 6px;
+    background: rgba(50, 205, 114, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.flip-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #32cd72, #73f973);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    width: 0%;
+    box-shadow: 0 0 10px rgba(50, 205, 114, 0.5);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .flip-book {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .flip-page {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .flip-progress {
+        width: 200px;
+        height: 5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flip-page {
+        animation: none;
+    }
+    
+    .flip-text h2 {
+        animation: none;
+    }
+}

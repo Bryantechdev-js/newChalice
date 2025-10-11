@@ -363,7 +363,54 @@ const publish = function(){
 }
 publish()
 
-      
-      
+// Loading Animation Handler
+window.addEventListener('load', function() {
+    const loader = document.getElementById('flipLoader');
+    const progressBar = document.getElementById('progressBar');
+    const body = document.body;
+    
+    // Simulate loading progress
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress > 100) progress = 100;
+        
+        progressBar.style.width = progress + '%';
+        
+        if (progress >= 100) {
+            clearInterval(progressInterval);
+            
+            // Hide loader after animation completes
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                body.classList.remove('loading');
+                
+                // Remove loader from DOM after fade out
+                setTimeout(() => {
+                    if (loader.parentNode) {
+                        loader.parentNode.removeChild(loader);
+                    }
+                }, 500);
+            }, 800);
+        }
+    }, 200);
+});
 
-      
+// Fallback: Hide loader after 5 seconds regardless
+setTimeout(() => {
+    const loader = document.getElementById('flipLoader');
+    const body = document.body;
+    
+    if (loader && loader.style.visibility !== 'hidden') {
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+        body.classList.remove('loading');
+        
+        setTimeout(() => {
+            if (loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+            }
+        }, 500);
+    }
+}, 5000);

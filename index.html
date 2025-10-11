@@ -31,6 +31,7 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" as="script">
     
     <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/flip-loader.css">
     
     <!-- GSAP Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
@@ -45,9 +46,29 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
     
+    <!-- Flip.js -->
+    <script src="https://unpkg.com/flip-toolkit@7.1.0/lib/index.js"></script>
+    
     <script type="module" src="./assets/scripts/script.js" defer></script>
 </head>
 <body class="loading">
+    <!-- Loading Animation -->
+    <div id="flipLoader">
+        <div class="flip-container">
+            <div class="flip-book">
+                <div class="flip-page"></div>
+                <div class="flip-page"></div>
+                <div class="flip-page"></div>
+            </div>
+            <div class="flip-text">
+                <h2>Loading Chalice</h2>
+                <p>Preparing your educational journey...</p>
+                <div class="flip-progress">
+                    <div class="flip-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
        <!-- 🔍 Search Bar in Navbar -->
 <div class="searchbar">
